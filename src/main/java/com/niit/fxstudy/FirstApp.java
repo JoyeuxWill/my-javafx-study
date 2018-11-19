@@ -1,5 +1,6 @@
 package com.niit.fxstudy;
 
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -23,7 +24,7 @@ public class FirstApp extends Application {
         //加载布局文件
         URL location = getClass().getResource("/fxml/main.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
-        BorderPane borderPane =fxmlLoader.load();
+        BorderPane borderPane = fxmlLoader.load();
         //获取屏幕大小
         Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
         Scene scene = new Scene(borderPane,screenSize.width,screenSize.height);
